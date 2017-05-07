@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-checkbox-table</title>
+    <link rel="stylesheet" type="text/css" href="css/vue-checkbox-table.css">
+  </head>
+<body>
+  <div id="vuetable">
+    <div id="toolbar">
+      <input id="search" type="text" placeholder="搜索"/>
+      <button>查询</button>
+      <button id="addBtn" @click="addUser">增加</button>
+      <button id="delBtn" @click="delUser">删除</button>
+    </div>
+
+     <table>
+      <thead>
+        <tr>
+          <th>
+          <!-- 这个只能:checked="xxx"，而如果学其他复选框:value="xxx"会不行的： -->
+            <input type="checkbox" :checked="isAllChecked" @click="globalCheck">
+          </th>
+          <th v-for="col in columns">{{ col }}</th>
+          <th>更新：</th>
+        </tr>
+      </thead>
+      <!-- <tfoot></tfoot> -->
+      <tbody>
+        <tr v-for="item in users">
+          <td><input type="checkbox" :value="item['id']" v-model="checkedIds"></td>
+          <td>{{item["name"]}}</td>
+          <td>{{item["TSubject"]}}</td>
+          <!-- 如果下面这行不是数组，td还可以更简单： -->
+          <td>{{item["TClass"].join()}}</td>
+          <td>{{item["tel"]}}</td>
+          <td><button @click="modifyUser">修改</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>debug log:</h3>
+    <p>数组checkedIds：<br>{{checkedIds}}</p>
+    <p>变量isAllChecked：<br><span>{{isAllChecked}}</span></p>
+  </div>
+
+  <script src="js/vue.js"></script>
+  <script src="js/vue-checkbox-table.js"></script>
+</body>
+</html>

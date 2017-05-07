@@ -1,0 +1,66 @@
+/*css写得比较潦草，让大家见笑：*/
+body {
+  background: #bfbfbf;
+}
+
+#vuetable {
+  padding: 30px;
+}
+#toolbar {
+  width: 660px;
+}
+#search {
+  /*这里随便写的：*/
+  width: 140px;
+  height: 24px;
+  border-radius: 3px;
+  text-align: center;
+}
+#addBtn, #delBtn {
+  float: right;
+  margin-right: 20px;
+}
+
+table th, table td {
+  border: 1px solid #efefef;
+  padding: 4px;
+}
+table th {
+  background: #ffffff;
+  border-radius: 3px;
+}
+table td {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+table {
+  text-align: center;
+  width: 660px;
+  margin-top: 20px;
+  height: 280px;
+}
+
+p span {
+  background: #fff;
+  color: red;
+  display: inline-block;
+  padding: 4px;
+}
+
+button {
+/*在网上找的一个样式：*/
+border:1px solid #333;  
+box-shadow: 0 1px 2px #8b8b8b inset,0 -1px 0 #3d3d3d inset,0 -2px 3px #8b8b8b inset;  
+background: -webkit-linear-gradient(top,#656565,#4c4c4c);  
+background: -moz-linear-gradient(top,#656565,#4a4a4a);  
+background: linear-gradient(top,#656565,#4a4a4a);   
+
+width: 60px;  
+line-height: 32px;  
+text-align: center;  
+color: #fff;
+font-size: 16px; 
+text-shadow:1px 1px 1px #333;  
+border-radius: 5px;
+cursor: pointer;
+}
