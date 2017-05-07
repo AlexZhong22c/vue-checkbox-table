@@ -47,4 +47,8 @@ https://cn.vuejs.org/v2/guide/forms.html#checkbox
 
 重申一次，正是由于**vue的数据绑定**使用起来耦合度太强，全局checkbox不能用`:value`来绑定状态，要用`:checked`和一个**onclick函数**绑定状态，否则逻辑会混乱。
 
+如果你想找**带分页导航条的**demo，可以参考我的：
+
+https://github.com/AlexZhong22c/vue-table-nav
+
 > 如果各位看官喜欢的话留一个Star吧！
